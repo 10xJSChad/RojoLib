@@ -1,3 +1,5 @@
+#include <iostream>
+#include <sstream>
 #include <string> 
 #include <vector>
 
@@ -34,4 +36,20 @@ std::string replace(std::string s, char toReplace, std::string replaceWith) {
         else { newString += x; }
     }
     return newString;
+}
+
+std::string toString(int i) {
+    std::string s;
+    std::stringstream ss;
+    ss << i;
+    ss >> s;
+    return s;
+}
+
+int toInt(std::string s) {
+    int i;
+    std::stringstream ss;
+    ss << s;
+    ss >> i;
+    return i;
 }
