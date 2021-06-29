@@ -38,6 +38,7 @@ std::string replace(std::string s, char toReplace, std::string replaceWith) {
     return newString;
 }
 
+//Converts int to string
 std::string toString(int i) {
     std::string s;
     std::stringstream ss;
@@ -46,10 +47,20 @@ std::string toString(int i) {
     return s;
 }
 
+//Converts string to int
 int toInt(std::string s) {
     int i;
     std::stringstream ss;
     ss << s;
     ss >> i;
     return i;
+}
+
+//Reverses string
+std::string reverse(std::string s) {
+    std::string sReverse;
+    for (int i = s.size() - 1; i > -1; i--) {
+        sReverse += s[i];
+    }
+    return sReverse;
 }
