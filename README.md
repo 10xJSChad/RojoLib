@@ -6,3 +6,5 @@ More may be added on to this in the future
 * Split a string by character
 * Strip string of character
 * Replace characters in a string
+* Very simple string to int and int to string conversion
+* Very simple reverse string function
