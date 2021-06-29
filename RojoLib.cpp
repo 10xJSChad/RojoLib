@@ -25,3 +25,13 @@ std::string strip(std::string s, char toStrip) {
     }
     return newString;
 }
+
+//Replace a character in a string
+std::string replace(std::string s, char toReplace, std::string replaceWith) {
+    std::string newString;
+    for (auto x : s) {
+        if (x == toReplace) { newString += replaceWith; }
+        else { newString += x; }
+    }
+    return newString;
+}
