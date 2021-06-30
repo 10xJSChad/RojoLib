@@ -64,3 +64,31 @@ std::string reverse(std::string s) {
     }
     return sReverse;
 }
+
+//Reverse int vector
+std::vector<int> reverse(std::vector<int> v, int a = 0, bool fromRight = false) {
+    if (a == 0) {
+        a = v.size() - 1;
+        for (int i = 0; i < v.size() / 2; i++) {
+            int temp = v[a]; v[a] = v[i]; v[i] = temp; a--;
+        }
+        return v;
+    }
+    else {
+        if (!fromRight) {
+            a--; int max = a / 2; if (a == 2) { max = a; }
+            for (int i = 0; i < a; i++) {
+                int temp = v[a]; v[a] = v[i]; v[i] = temp; a--;
+            }
+            return v;
+        }
+        else {
+            a--; int max = v.size() - 1;
+            for (int i = max - a; i < max; i++) {
+                int temp = v[max]; v[max] = v[i]; v[i] = temp; max--;
+            }
+            return v;
+        }
+    }
+    return v;
+}
